@@ -181,6 +181,11 @@ python3 client_timing_mtls.py
 
 Los scripts calculan automáticamente los tiempos de ejecución medios, mínimos y máximos utilizados en la evaluación presentada en la memoria.
 
+## Diagrama de arquitectura
+
+<img width="890" height="409" alt="image" src="https://github.com/user-attachments/assets/63033f7c-44ff-40ba-b3ba-96f38ec15b5e" />
+
+
 ## Autor
 
 Michele Barrera
