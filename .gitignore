@@ -1,0 +1,31 @@
+# Vault
+vault/data/
+vault/*.json
+
+# Certificados y claves
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+
+# Python
+__pycache__/
+*.pyc
+
+# AWS CLI descargado
+aws/
+awscliv2.zip
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Entornos virtuales
+venv/
+.venv/
+
+# Sistema
+.DS_Store
