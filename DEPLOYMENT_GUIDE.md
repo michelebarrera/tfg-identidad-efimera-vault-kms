@@ -93,6 +93,7 @@ En otra terminal:
 
 ```bash
 export VAULT_ADDR="http://127.0.0.1:8200"
+export VAULT_TOKEN="TU_INITIAL_ROOT_TOKEN"
 ```
 
 Inicializar Vault:
