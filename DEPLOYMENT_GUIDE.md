@@ -173,17 +173,35 @@ Guardar el token generado.
 ### Certificado servidor
 
 ```bash
+cd ~/TFG/mtls-demo/server
 vault write -format=json pki/issue/tfg-service \
  common_name="mtls-server.tfg.local" \
  ttl="30m"
+```
+Extraer el certificado
+```bash
+cat server-response.json | jq -r '.data.certificate' > certs/server.crt cat server-response.json | jq -r '.data.private_key' > certs/server.key cat server-response.json | jq -r '.data.issuing_ca' > certs/ca.crt
+```
+Comprobar validez del certificado:
+```bash
+openssl x509 -in certs/server.crt -noout -dates -subject
 ```
 
 ### Certificado cliente
 
 ```bash
+cd ~/TFG/mtls-demo/client
 vault write -format=json pki/issue/tfg-service \
  common_name="lambda-client.tfg.local" \
  ttl="30m"
+```
+Extraer el certificado
+```bash
+cat client-response.json | jq -r '.data.certificate' > certs/client.crt cat client-response.json | jq -r '.data.private_key' > certs/client.key cat client-response.json | jq -r '.data.issuing_ca' > certs/ca.crt
+```
+Comprobar validez del certificado:
+```bash
+openssl x509 -in certs/client.crt -noout -dates -subject
 ```
 
 ---
