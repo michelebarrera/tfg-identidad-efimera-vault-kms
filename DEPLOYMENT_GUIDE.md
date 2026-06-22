@@ -153,6 +153,7 @@ vault write pki/roles/tfg-service \
 Cargar la política incluida en el repositorio:
 
 ```bash
+cd ~/TFG/vault
 vault policy write tfg-service-policy \
  policies/tfg-service-policy.hcl
 ```
